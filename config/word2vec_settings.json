@@ -1,0 +1,32 @@
+{
+  "spacy" : {
+    "modelname" : "nl_core_news_sm",
+    "batch_size" : 5000,
+    "threads" : 10
+  },
+  "preprocessing" : {
+    "lemmatize" : true,
+    "min_sent_length" : 3,
+    "remove_stopwords" : true
+  },
+  "input" : {
+    "path_to_csv" : "../res/simpsons_dataset.csv",
+    "column_to_process" : "spoken_words"
+  },
+  "output" : {
+    "folder" : "../output"
+  },
+  "word2vec" : {
+     "min_count" : 20,
+     "window" : 2,
+     "size" : 300,
+     "sample" : 6e-5,
+     "alpha" : 0.03,
+     "min_alpha" : 0.0007,
+     "negative" : 20,
+     "workers" : 3,
+    "vocab_progress_per" : 10000,
+    "epochs" : 30,
+    "report_delay" : 1
+  }
+}
