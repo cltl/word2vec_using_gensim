@@ -41,7 +41,6 @@ nlp = spacy.load(settings['spacy']['modelname'],
 df = df_utils.load_data(csv_path=settings['input']['path_to_csv'],
                         verbose=verbose)
 
-df = df.head(10000)
 
 # preprocessing
 cleaned_txt = spacy_utils.clean_txt(df,
